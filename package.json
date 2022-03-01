@@ -1,0 +1,22 @@
+{
+  "name": "margherita-products-api",
+  "version": "1.0.0",
+  "description": "API to handle sending and retrieving data from a database for product information",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Team-Margherita-SDC/Margherita-Products-Api.git"
+  },
+  "author": "BJ White",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Team-Margherita-SDC/Margherita-Products-Api/issues"
+  },
+  "homepage": "https://github.com/Team-Margherita-SDC/Margherita-Products-Api#readme",
+  "dependencies": {
+    "express": "^4.17.3"
+  }
+}

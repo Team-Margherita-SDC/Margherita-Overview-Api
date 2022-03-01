@@ -1,2 +1,2 @@
-# Margherita-Overview-Api
-API for Overview Widget
+# Margherita-Products-Api
+API for Products Widget
