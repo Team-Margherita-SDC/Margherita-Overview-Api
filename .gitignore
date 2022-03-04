@@ -7,3 +7,7 @@
 /Data/styles.csv
 
 node_modules
+
+config.js
+
+.DS_store
