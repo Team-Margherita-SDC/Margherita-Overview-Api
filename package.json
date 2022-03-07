@@ -2,10 +2,11 @@
   "name": "margherita-products-api",
   "version": "1.0.0",
   "description": "API to handle sending and retrieving data from a database for product information",
-  "main": "index.js",
+  "main": "server/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon server/index.js"
+    "startdev": "nodemon server/index.js",
+    "start": "node server/index.js"
   },
   "repository": {
     "type": "git",
@@ -18,7 +19,9 @@
   },
   "homepage": "https://github.com/Team-Margherita-SDC/Margherita-Products-Api#readme",
   "dependencies": {
+    "artillery": "^2.0.0-12",
     "express": "^4.17.3",
+    "newrelic": "^8.8.0",
     "nodemon": "^2.0.15",
     "pg": "^8.7.3"
   }
