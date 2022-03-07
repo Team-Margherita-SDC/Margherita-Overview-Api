@@ -1,10 +1,10 @@
+require('newrelic');
 const express = require('express');
 const db = require('../Database/index.js');
 const { getProducts, getProductInfo, getStyles, getRelated } = require('../Database/dbQueryFuncs/queries.js')
 const app = express();
 const port = 3200;
 
-app.use(express.json());
 
 app.get('/products', (req, res) => {
   count = req.query.count || 5;
