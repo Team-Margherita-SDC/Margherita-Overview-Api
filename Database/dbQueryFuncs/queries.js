@@ -5,14 +5,26 @@ const getProducts = (count, page, cb) => {
   let stop = page * count;
   let query = `Select * from products where id > $1 AND id <= $2`
 
-  db.query(query, [start, stop], (err, results) => {
+   db.query(query, [start, stop], (err, results) => {
     if (err) {
       cb(err);
     } else {
       cb(null, results.rows);
     }
   })
+
+  // db.query(query, [start, stop])
+  //   .then((results) => {
+  //     cb(null, results.rows)
+  //   })
+  //   .catch((err) => {
+  //     cb(err);
+  //   })
+
+
 }
+
+
 
 const getProductInfo = (id, cb) => {
 

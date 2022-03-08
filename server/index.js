@@ -1,14 +1,30 @@
-require('newrelic');
+//require('newrelic');
 const express = require('express');
 const db = require('../Database/index.js');
 const { getProducts, getProductInfo, getStyles, getRelated } = require('../Database/dbQueryFuncs/queries.js')
 const app = express();
 const port = 3200;
 
+//app.use(express.json());
 
 app.get('/products', (req, res) => {
-  count = req.query.count || 5;
-  page = req.query.page || 1;
+  let count = req.query.count || 5;
+  let page = req.query.page || 1;
+  // let start = (page - 1) * count;
+  // let stop = page * count;
+  // let query = `Select * from products where id > $1 AND id <= $2`
+
+  //  db.query(query, [start, stop])
+  //   .then((results) => {
+  //     res.status(200);
+  //     res.send(results.rows)
+  //     // cb(null, results.rows)
+  //   })
+  //   .catch((err) => {
+  //     //cb(err);
+  //     res.status(400);
+  //     res.send('Error Getting Products');
+  //   })
 
   getProducts(count, page, (err, results) => {
     if (err) {
